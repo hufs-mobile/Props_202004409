@@ -1,11 +1,18 @@
 import React from "react";
-import { Button, ScrollView, View, StyleSheet } from "react-native";
+import { Text, Button, ScrollView, View, StyleSheet, Image, ImageBackground } from "react-native";
+import Constants from "expo-constants";
 
 const App = () => {
   return (
      <>
+      <View style={{paddingTop: Constants.statusBarHeight}}></View>
       <View style={[styles.container, styles.playingSpace]}>
-
+      <Text>Hi, I'm writing a text.</Text>
+      <Text>Hi, I'm writing a text again.</Text>
+      <Image source = {require('./assets/favicon.png')}/>
+      <Image 
+        style = {{width: 100, height: 100}}
+        source = {{uri: 'http://reactnative.dev/img/tiny_logo.png'}}/>
       </View>
       <ScrollView style={[styles.container]}>
         <View style={[styles.controlSpace]}>
