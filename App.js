@@ -3,16 +3,27 @@ import { Text, Button, ScrollView, View, StyleSheet, Image, ImageBackground } fr
 import Constants from "expo-constants";
 
 const App = () => {
-  return (
-     <>
-      <View style={{paddingTop: Constants.statusBarHeight}}></View>
+  return (<>
+    <View style={{paddingTop: Constants.statusBarHeight}}></View>
       <View style={[styles.container, styles.playingSpace]}>
-      <Text>Hi, I'm writing a text.</Text>
-      <Text>Hi, I'm writing a text again.</Text>
-      <Image source = {require('./assets/favicon.png')}/>
-      <Image 
-        style = {{width: 100, height: 100}}
-        source = {{uri: 'http://reactnative.dev/img/tiny_logo.png'}}/>
+        <Text>Hi, I'm writing a text.</Text>
+        <Text>Hi, I'm writing a text again.</Text>
+        <Text>Do you remember
+              The 21st night of September?
+              Love was changin' the minds of pretenders
+              While chasin' the clouds away
+              Our hearts were ringin'
+              In the key that our souls were singin'
+              As we danced in the night, remember
+              How the stars stole the night away, oh, yeah
+              Hey, hey, hey
+              Ba-dee-ya, say, do you remember?
+              Ba-dee-ya, dancin' in September
+              Ba-dee-ya, never was a cloudy day</Text>
+        <Image source = {require('./assets/favicon.png')}/>
+        <Image
+          style = {{width:100, height:100}}
+          source = {{uri: 'http://reactnative.dev/img/tiny_logo.png'}}/>
       </View>
       <ScrollView style={[styles.container]}>
         <View style={[styles.controlSpace]}>
@@ -32,15 +43,14 @@ const App = () => {
             <Button title = "Change flex wrap"/>
           </View>
           <View style={[styles.buttonView]}>
-            <Button title = "add square"/>
+            <Button title = "Add square"/>
           </View>
           <View style={[styles.buttonView]}>
             <Button title = "Delete Square"/>
           </View>
         </View>
       </ScrollView>
-     </>
-    );
+    </>);
   }
 
   const styles = StyleSheet.create({
