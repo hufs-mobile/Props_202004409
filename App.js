@@ -21,9 +21,13 @@ const App = () => {
               Ba-dee-ya, dancin' in September
               Ba-dee-ya, never was a cloudy day</Text>
         <Image source = {require('./assets/favicon.png')}/>
-        <Image
-          style = {{width:100, height:100}}
-          source = {{uri: 'http://reactnative.dev/img/tiny_logo.png'}}/>
+        <ImageBackground
+          style = {{width:300, height:300}}
+          source = {{uri: 'http://reactnative.dev/img/tiny_logo.png'}}>
+          <View>
+            <Text>September by Earth Fire & Wind</Text>
+          </View> 
+        </ImageBackground>
       </View>
       <ScrollView style={[styles.container]}>
         <View style={[styles.controlSpace]}>
