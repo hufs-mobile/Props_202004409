@@ -22,10 +22,10 @@ const App = () => {
               Ba-dee-ya, never was a cloudy day</Text>
         <Image source = {require('./assets/favicon.png')}/>
         <ImageBackground
-          style = {{width:300, height:300}}
+          style = {{width:100, height:100}}
           source = {{uri: 'http://reactnative.dev/img/tiny_logo.png'}}>
           <View>
-            <Text>September by Earth Fire & Wind</Text>
+            <Text style = {{color: 'white'}}>September by Earth Fire & Wind</Text>
           </View> 
         </ImageBackground>
       </View>
