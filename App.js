@@ -1,13 +1,32 @@
 import React from "react";
 import { Text, Button, ScrollView, View, StyleSheet, Image, ImageBackground } from "react-native";
 import Constants from "expo-constants";
+import { useState } from "react";
 
 const App = () => {
+
+  const flexDirections = ['row', 'rew-reverse', 'column', 'column-reverse'];
+
+  const [flexDirection, setFlexDirection] = useState(0);
+
+  const Square = () => {
+    const sqStyle = {
+      width: 50,
+      height: 50,
+      backgroundColor:randomHexColor(),
+    };
+    return <View style={sqStyle} />;
+  };
+
+  const [squares, setSquares] = useState([Square(), Square(), Square()]);
+
   return (
     <>
     <View style={{paddingTop: Constants.statusBarHeight}}></View>
-    <ScrollView style={[styles.container, styles.playingSpace]}/>
-    
+    <ScrollView style={[styles.container, styles.playingSpace]}>
+      { squares.map(elem => elem) }    
+      </ScrollView>
+
     <ScrollView style={[styles.container]}>
       <View style={[styles.controlSpace]}>
         <View style={[styles.buttonView]}>
@@ -37,12 +56,12 @@ const App = () => {
         </View>
         <View style={[styles.buttonView]}>
           <Button title = "Add square"
-            onPress={()=>console.log("ADD SQUARE")}
+            onPress={()=>setSquares([...squares, Square()])}
           />
         </View>
         <View style={[styles.buttonView]}>
           <Button title = "Delete Square"
-            onPress={()=>console.log("DELETE SQUARE")}
+            onPress={()=>setSquares(squares.filter((v,i)=>i !=squares.length-1))}
           />
         </View>
       </View>
@@ -73,5 +92,11 @@ const App = () => {
       margin: 5
     }
   });
+
+  const randomHexColor = () => {
+    return '#000000'.replace(/0/g, () => {
+      return (~~(Math.random() * 16)).toString(16);
+    });
+  };
 
   export default App;
