@@ -26,14 +26,14 @@ const styles = StyleSheet.create({
         backgroundColor:'#ebebeb'
     },
     buttoneContainer:{
-        backgroundColor:'black',
+        backgroundColor:'skyblue',
         borderRadius:5,
         padding:10,
         margin:20
     },
     buttonTest:{
         fontSize:20,
-        color:'#fff'
+        color:'blue'
     }
 })
 

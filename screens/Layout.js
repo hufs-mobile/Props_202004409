@@ -100,7 +100,7 @@ const Layout = (props) => {
           />
         </View>
         <View style={[styles.buttonView]}>
-          <Button title="GO TO HOME" 
+          <Button title="Go To Home" 
             onPress={() => navigation.navigate('Home')}/>
         </View>
       </View>
@@ -114,9 +114,9 @@ const Layout = (props) => {
       height:'50%'
     },
     playingSpace:{
-      backgroundColor: "grey",
-      borderColor: "blue",
-      borderWidth: 3,
+      backgroundColor: "#fff",
+      borderColor: "skyblue",
+      borderWidth: 5,
     },
     controlSpace: {
       backgroundColor: "F5F5F5",
@@ -128,7 +128,8 @@ const Layout = (props) => {
       width: '47%',
       padding: 5,
       marginLeft: 5,
-      margin: 5
+      margin: 5,
+      borderRadius: 5
     }
   });
 
