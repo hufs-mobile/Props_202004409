@@ -113,18 +113,19 @@ const Layout = (props) => {
     container: {
       height:'50%'
     },
-    playingSpace:{
+    playingSpace: {
       backgroundColor: "#fff",
-      borderColor: "skyblue",
+      borderColor: "#A4BE7B",
       borderWidth: 5,
     },
     controlSpace: {
-      backgroundColor: "F5F5F5",
+      backgroundColor: "#fff",
       flexDirection: 'row',
       flexWrap: 'wrap'
     },
-    buttonView:{
-      backgroundColor: "skyblue",
+    buttonView: {
+      color: '#000',
+      backgroundColor: "#A4BE7B",
       width: '47%',
       padding: 5,
       marginLeft: 5,

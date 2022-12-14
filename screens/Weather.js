@@ -7,20 +7,57 @@ import {REACT_APP_WEATHER_KEY} from "@env";
 import axios from "axios";
 
 const weatherOptions = {
+    Haze: {
+        iconName: "weather-hail"
+    },
+    Thunderstorm: {
+        iconName: "weather-lightning"
+    },
+    Drizzle: {
+        iconName: "weather-pouring"
+    },
+    Rain: {
+        iconName: "weather-rainy"
+    },
+    Snow: {
+        iconName: "weather-snowy"
+    },
+    Mist: {
+        iconName: "weather-fog"
+    },
+    Smoke: {
+        iconName: "weather-fog"
+    },
+    Dust: {
+        iconName: "weather-fog"
+    },
+    Fog: {
+        iconName: "weather-fog"
+    },
+    Sand: {
+        iconName: "weather-fog"
+    },
+    Ash: {
+        iconName: "weather-fog"
+    },
+    Squall: {
+        iconName: "weather-partly-rainy"
+    },
+    Tornado: {
+        iconName: "weather-tornado"
+    },
     Clear: {
-        iconName : "weather-sunny"
+        iconName: "weather-sunny"
     },
     Clouds: {
-        iconName : "weather-cloudy"
+        iconName: "weather-cloudy"
     }
 }
 
 export default class Weather extends React.Component {
-
     state = {
         cond : "Clear"
     }
-
     getWeather = async (latitude, longitude) => {
         try {
             const {data} = await axios.get(
@@ -66,8 +103,8 @@ export default class Weather extends React.Component {
         return (
             <View style={[styles.container]}>
                 <View style={[styles.halfcontainer]}>
-                    <MaterialCommunityIcons name={weatherOptions[cond].iconName} size={128} color="black" />
-                    <Text style={[styles.temptitle]}> {temp} </Text>
+                    <MaterialCommunityIcons name={weatherOptions[cond].iconName} size={128} color="#5F8D4E" />
+                    <Text style={[styles.temptitle]}> {temp}ºC </Text>
                 </View>
             </View>
         );
@@ -83,9 +120,10 @@ const styles = StyleSheet.create({
     halfcontainer: {
         flex: 1,
         justifyContent : "center",
-        alignItems: "center",
+        alignItems: "center"
     },
     temptitle: {
         fontSize: 24,
+        color: "#5F8D4E"
     }
 });

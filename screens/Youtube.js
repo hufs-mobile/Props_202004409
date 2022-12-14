@@ -27,8 +27,9 @@ const YoutubeViewer = (props) => {
               videoId={playingVideoId}
               onChangeState={onStateChange}/>
           <Button 
-              style={styles.buttonContainer}
-              title={playing ? "pause" : "play"} 
+              margin={20}
+              title={playing ? "pause" : "play"}
+              color={"#5F8D4E"}
               onPress={togglePlaying}/>
           <TextInput
               style={styles.input}
@@ -40,16 +41,12 @@ const YoutubeViewer = (props) => {
 
 const styles = StyleSheet.create({
     input: {
+      color: "#fff",
       height: 40,
       margin: 12,
+      borderColor: "#5F8D4E",
       borderWidth: 1,
       padding: 10,
-    },
-    buttonContainer:{
-      backgroundColor:'skyblue',
-      borderRadius:5,
-      padding:10,
-      margin:20
     }
   });
 

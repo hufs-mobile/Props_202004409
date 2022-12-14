@@ -5,8 +5,8 @@ function Home({navigation}) {
     return (
         <View style={styles.container}>
         <Image 
-            source={require('../assets/frog-1371919.png')}
-            style={{width:400,height:400}}    
+            source={require('../assets/wildflowers.jpg')}
+            style={{width:400, height:400}}    
         />
         <TouchableOpacity
             style={styles.buttoneContainer}
@@ -26,14 +26,14 @@ const styles = StyleSheet.create({
         backgroundColor:'#ebebeb'
     },
     buttoneContainer:{
-        backgroundColor:'skyblue',
+        backgroundColor:'#5F8D4E',
         borderRadius:5,
         padding:10,
         margin:20
     },
     buttonTest:{
         fontSize:20,
-        color:'blue'
+        color:'#fff'
     }
 })
 
